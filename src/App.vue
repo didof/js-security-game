@@ -23,7 +23,7 @@ export default defineComponent({
     Level5,
   },
   setup() {
-    const level = ref(5)
+    const level = ref(1)
 
     return {
       level,
