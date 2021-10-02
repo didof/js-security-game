@@ -26,7 +26,7 @@ export default defineComponent({
     const level = ref(1)
 
     const savedLevel = window.localStorage.getItem('level')
-    if (savedLevel) level.value = JSON.parse(savedLevel)
+    if (savedLevel) level.value = parseInt(JSON.parse(savedLevel))
 
     function next() {
       level.value += 1
