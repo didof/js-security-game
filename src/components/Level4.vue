@@ -52,8 +52,6 @@
       </pre>
     </div>
 
-    {{ success }}
-
     <div v-if="success">
       <hr />
       <h3>Great Success!</h3>
