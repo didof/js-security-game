@@ -65,10 +65,21 @@ export default defineComponent({
     Tips,
   },
   setup() {
+    const tips = ['open developer tools', 'look into window object']
+
     const password = ref('')
     const success = ref(false)
 
-    const tips = ['open developer tools', 'look into window object']
+    window.Bank = null
+
+    {
+      class Bank {
+        caveau = ['$', '$', '$', '$', '$']
+        password = 'password123'
+      }
+
+      window.Bank = Bank
+    }
 
     return { password, check, tips, success }
 
