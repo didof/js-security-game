@@ -91,7 +91,6 @@ export default defineComponent({
     }
 
     function check() {
-      console.log(password.value)
       if (password.value !== 'P4s$w0R2!') {
         alert(`The password is not ${password.value}`)
         password.value = ''
