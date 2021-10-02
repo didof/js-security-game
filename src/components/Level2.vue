@@ -63,12 +63,25 @@ export default defineComponent({
   components: { Tips },
   emits: ['next'],
   setup() {
-    const password = ref('')
-    const success = ref(false)
-
     const tips = [
       "It's similar to the previous solution. Instead of just printing the reference to the expose function, print the result of its invocation",
     ]
+
+    const password = ref('')
+    const success = ref(false)
+
+    window.Bank = null
+
+    {
+      class Bank {
+        caveau = ['$', '$', '$', '$', '$']
+        password = 'P4s$w0R2!'
+      }
+
+      window.Bank = function exposeBank() {
+        return Bank
+      }
+    }
 
     return {
       password,
@@ -89,17 +102,4 @@ export default defineComponent({
     }
   },
 })
-
-window.Bank = null
-
-{
-  class Bank {
-    caveau = ['$', '$', '$', '$', '$']
-    password = 'P4s$w0R2!'
-  }
-
-  window.Bank = function exposeBank() {
-    return Bank
-  }
-}
 </script>

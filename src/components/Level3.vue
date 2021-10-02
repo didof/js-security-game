@@ -150,13 +150,13 @@ export default defineComponent({
   components: { Tips },
   emits: ['next'],
   setup() {
-    const success = ref(false)
-
     const tips = [
       'By instantiating Bank, an error informs you that its expecting a configuration object from which to extract address.',
       'Find a way to get notified each time address is accessed into Bank',
       'Exploit the previous info (think to getters)',
     ]
+
+    const success = ref(false)
 
     const tip1 = ref(false)
     const tip2 = ref(false)
