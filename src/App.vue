@@ -1,6 +1,6 @@
 <template>
   <div>
-    <component :is="'level' + level" @next="level++" />
+    <component :is="'level' + level" @next="next" />
   </div>
 </template>
 
@@ -25,8 +25,17 @@ export default defineComponent({
   setup() {
     const level = ref(1)
 
+    const savedLevel = window.localStorage.getItem('level')
+    if (savedLevel) level.value = savedLevel
+
+    function next() {
+      level.value += 1
+      window.localStorage.setItem('level', level.value)
+    }
+
     return {
       level,
+      next,
     }
   },
 })
