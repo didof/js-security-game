@@ -34,7 +34,7 @@
       {
         class Bank {
           caveau = ['$', '$', '$', '$', '$']
-          password = 'P4s$w0R2!'
+          password = 'admin1!'
         }
 
         window.Bank = function exposeBank() {
@@ -75,7 +75,7 @@ export default defineComponent({
     {
       class Bank {
         caveau = ['$', '$', '$', '$', '$']
-        password = 'P4s$w0R2!'
+        password = 'admin1!'
       }
 
       window.Bank = function exposeBank() {
@@ -91,7 +91,7 @@ export default defineComponent({
     }
 
     function check() {
-      if (password.value !== 'P4s$w0R2!') {
+      if (password.value !== 'admin1!') {
         alert(`The password is not ${password.value}`)
         password.value = ''
         return
