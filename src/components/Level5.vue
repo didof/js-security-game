@@ -1,16 +1,18 @@
 <template>
   <div>
     <h1>Level 5</h1>
-    <h2>I Fought the Law and the Law Won</h2>
+    <h2>Nobody is Safe</h2>
 
     <h3>Premise:</h3>
     <p>
-      Red-blooded, ambitious and strong, you aim to the Central Bank of the
-      Nation.
+      Now that you understand the power of overriding built-in features, you
+      walk around the city proud and arrogant, in your snakeskin boots.
     </p>
     <p>
-      But take that little smile off your face: I haven't been able to break
-      through here either. This <code>Bank</code> is thief proof.
+      This time you won't have to shoot blindly; you have searched the
+      perimeter, you have bribed the right people - you know what the
+      <code>Bank</code>
+      structure is like.
     </p>
     <b>Good Luck, boy</b>
 
@@ -73,7 +75,6 @@
 
             console.info(`One ${$} has been transfered to ${targetAddress}`)
 
-            // for game sake
             if (targetAddress === 'malicious://badguy') {
               console.info('You won!')
             }
@@ -92,11 +93,13 @@
       <h3>Incredible Success!</h3>
       <p>
         You made it. I am truly amazed. You truly are the greatest cowboy of all
-        time, you American Venom!
+        time, you <b>American Venom</b>!
       </p>
 
+      <p>I am currently working on other leves.</p>
+
       <hr />
-      <a href="mailto://didonato.fr@gmail.com">I will tell you how I did it!</a>
+      <a href="mailto://didonato.fr@gmail.com">I can suggest some!</a>
     </div>
   </div>
 </template>
@@ -153,6 +156,7 @@ export default defineComponent({
           console.info(`One ${$} has been transfered to <${address}>`)
 
           if (address === 'malicious://badguy') {
+            success.value = true
             console.info('You won!')
           }
         }
