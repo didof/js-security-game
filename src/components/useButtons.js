@@ -25,7 +25,10 @@ export default function useButtons(pageAmount) {
 
         const attrs = {
           onclick: () => index.value++,
-          disabled: index.value === pageAmount || index.value === savedLevel,
+          disabled:
+            index.value === pageAmount ||
+            !savedLevel ||
+            index.value === savedLevel,
         }
 
         return h('button', attrs, 'next')
